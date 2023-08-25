@@ -26,7 +26,7 @@ class AssetController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'type_iid' => 'required|string|max:255',
+            'type_id' => 'required|string|max:255',
             'purchase_date' => 'required|date',
             'status' => 'required|in:Active,In-Active',
         ]);
@@ -51,7 +51,7 @@ class AssetController extends Controller
             'status' => 'required|in:Active,In-Active',
         ]);
 
-        $assets->update($request->all());
+        $asset->update($request->all());
 
         return redirect()->route('assets.index')->with('success', 'Asset updated successfully.');
     }
@@ -64,4 +64,3 @@ class AssetController extends Controller
         return redirect()->route('assets.index')->with('success', 'Asset deleted successfully!');
     }
 }
-
