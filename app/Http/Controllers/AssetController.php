@@ -51,7 +51,7 @@ class AssetController extends Controller
             'status' => 'required|in:Active,In-Active',
         ]);
 
-        $assets->update($request->all());
+        $asset->update($request->all());
 
         return redirect()->route('assets.index')->with('success', 'Asset updated successfully.');
     }
