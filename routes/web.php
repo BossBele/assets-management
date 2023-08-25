@@ -21,5 +21,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/store-assets', [AssetController::class, 'store'])->name('assets.store');
     Route::get('/edit-asset/{asset}', [AssetController::class, 'edit'])->name('assets.edit');
     Route::put('/update-assets/{asset}', [AssetController::class, 'update'])->name('assets.update');
-    Route::delete('/delete-assets/{assset}', [AssetController::class, 'destroy'])->name('assets.destroy');
+    Route::delete('/delete-assets/{asset}', [AssetController::class, 'destroy'])->name('assets.destroy');
 });
